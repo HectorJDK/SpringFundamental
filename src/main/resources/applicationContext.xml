@@ -4,7 +4,5 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name="speakerRepository" class="com.pluralsight.repository.HibernateSpeakerRepositoryImpl"/>
-    <bean name="speakerService" class="com.pluralsight.service.SpeakerServiceImp">
-        <constructor-arg index="0" ref="speakerRepository"/>
-    </bean>
+    <bean name="speakerService" class="com.pluralsight.service.SpeakerServiceImp" autowire="constructor"/>
 </beans>
